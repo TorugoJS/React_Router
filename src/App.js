@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css';
 
 import Navbar from './components/Navbar';
+import SearchForm from './components/SearchForm';
 
 import About from './pages/About';
 import Home from './pages/Home';
@@ -16,13 +17,24 @@ import Info from './pages/Info';
 import NotFound from './pages/NotFound';
 
 import Product from './pages/Product';
+import Search from './pages/Search';
 
 function App() {
   return (
+
     <div className="App">
+
       <h1>React Router</h1>
+
       <BrowserRouter>
+
+
       <Navbar />
+
+      {/* 9 - search */}
+      <SearchForm />
+
+
         <Routes>
 
         <Route path="/" element={<Home />} />
@@ -34,6 +46,9 @@ function App() {
 
         {/* 6 - nested routes */}
         <Route path="/products/:id/info" element={<Info/>} />
+        
+        {/* 9 - search */}
+        <Route path="/search" element={<Search />} />
 
       {/* 7 - no match route */}
       <Route path="*" element={<NotFound />} />
