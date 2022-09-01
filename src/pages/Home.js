@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useFetch } from "../hooks/useFetch";
 
 import "./Home.css";
-import Product from "./Product";
+// import Product from "./Product";
 
 const Home = () => {
   // 3 - carregamento de dados
